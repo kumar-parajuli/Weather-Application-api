@@ -64,7 +64,7 @@
             this.TBCity.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBCity.Location = new System.Drawing.Point(182, 83);
             this.TBCity.Name = "TBCity";
-            this.TBCity.Size = new System.Drawing.Size(150, 29);
+            this.TBCity.Size = new System.Drawing.Size(201, 29);
             this.TBCity.TabIndex = 1;
             // 
             // Search
@@ -72,9 +72,9 @@
             this.Search.BackColor = System.Drawing.Color.Transparent;
             this.Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Search.ForeColor = System.Drawing.Color.White;
-            this.Search.Location = new System.Drawing.Point(391, 82);
+            this.Search.Location = new System.Drawing.Point(406, 83);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(75, 23);
+            this.Search.Size = new System.Drawing.Size(75, 29);
             this.Search.TabIndex = 2;
             this.Search.Text = "Search...";
             this.Search.UseVisualStyleBackColor = false;
@@ -86,7 +86,7 @@
             this.labCondiction.BackColor = System.Drawing.Color.Transparent;
             this.labCondiction.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labCondiction.ForeColor = System.Drawing.Color.White;
-            this.labCondiction.Location = new System.Drawing.Point(93, 181);
+            this.labCondiction.Location = new System.Drawing.Point(85, 181);
             this.labCondiction.Name = "labCondiction";
             this.labCondiction.Size = new System.Drawing.Size(83, 23);
             this.labCondiction.TabIndex = 3;
@@ -99,11 +99,11 @@
             this.label.BackColor = System.Drawing.Color.Transparent;
             this.label.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.Color.White;
-            this.label.Location = new System.Drawing.Point(93, 319);
+            this.label.Location = new System.Drawing.Point(81, 319);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(64, 23);
+            this.label.Size = new System.Drawing.Size(66, 23);
             this.label.TabIndex = 4;
-            this.label.Text = "SunSet:";
+            this.label.Text = "Sunset :";
             // 
             // lable
             // 
@@ -123,7 +123,7 @@
             this.labDetail.BackColor = System.Drawing.Color.Transparent;
             this.labDetail.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labDetail.ForeColor = System.Drawing.Color.White;
-            this.labDetail.Location = new System.Drawing.Point(93, 222);
+            this.labDetail.Location = new System.Drawing.Point(85, 222);
             this.labDetail.Name = "labDetail";
             this.labDetail.Size = new System.Drawing.Size(60, 23);
             this.labDetail.TabIndex = 6;
@@ -135,7 +135,7 @@
             this.labeSunsine.BackColor = System.Drawing.Color.Transparent;
             this.labeSunsine.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeSunsine.ForeColor = System.Drawing.Color.White;
-            this.labeSunsine.Location = new System.Drawing.Point(167, 266);
+            this.labeSunsine.Location = new System.Drawing.Point(178, 266);
             this.labeSunsine.Name = "labeSunsine";
             this.labeSunsine.Size = new System.Drawing.Size(35, 23);
             this.labeSunsine.TabIndex = 7;
@@ -160,7 +160,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(450, 170);
+            this.label2.Location = new System.Drawing.Point(450, 236);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 23);
             this.label2.TabIndex = 9;
@@ -172,7 +172,7 @@
             this.labWindspeed.BackColor = System.Drawing.Color.Transparent;
             this.labWindspeed.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labWindspeed.ForeColor = System.Drawing.Color.White;
-            this.labWindspeed.Location = new System.Drawing.Point(560, 170);
+            this.labWindspeed.Location = new System.Drawing.Point(579, 236);
             this.labWindspeed.Name = "labWindspeed";
             this.labWindspeed.Size = new System.Drawing.Size(35, 23);
             this.labWindspeed.TabIndex = 10;
@@ -207,9 +207,9 @@
             // 
             this.picIcon.BackColor = System.Drawing.Color.Transparent;
             this.picIcon.ErrorImage = ((System.Drawing.Image)(resources.GetObject("picIcon.ErrorImage")));
-            this.picIcon.Location = new System.Drawing.Point(89, 128);
+            this.picIcon.Location = new System.Drawing.Point(443, 134);
             this.picIcon.Name = "picIcon";
-            this.picIcon.Size = new System.Drawing.Size(113, 50);
+            this.picIcon.Size = new System.Drawing.Size(132, 79);
             this.picIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picIcon.TabIndex = 13;
             this.picIcon.TabStop = false;
