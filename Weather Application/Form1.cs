@@ -40,9 +40,12 @@ namespace Weather_Application
 
         }
 
-      
 
-        private void label1_Click(object sender, EventArgs e)
+        private void labeSunsine_Click(object sender, EventArgs e)
+        {
+
+        }
+            private void label1_Click(object sender, EventArgs e)
         {
 
         }
@@ -121,18 +124,20 @@ namespace Weather_Application
                 //picIcon.ImageLocation = "https://openweathermap.org/img/w/02n.png" + info.weather[0].icon + ".png";
                 labCondiction.Text = info.weather[0].main;
                 labDetail.Text = info.weather[0].description;
-                labeSunsine.Text = info.sys.sunrise.ToString();
-                labeSunset.Text = info.sys.sunset.ToString();
+                labeSunsine.Text = convertDateTime(info.sys.sunrise).ToString();
+                labeSunset.Text = convertDateTime(info.sys.sunset).ToString();
                 labWindspeed.Text = info.wind.speed.ToString();
                 labPressure.Text = info.main.pressure.ToString();
 
             }
         }
-
-
-        private void labeSunsine_Click(object sender, EventArgs e)
+        DateTime convertDateTime(long millisec)
         {
-
+            DateTime day = new DateTime(2023, 1, 1, 0, 0, 0,0, System.DateTimeKind.Utc).ToLocalTime();
+            day = day.AddMilliseconds(millisec).ToLocalTime();
+            return day;
         }
+
+        
     }
 }
