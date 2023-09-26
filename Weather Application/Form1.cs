@@ -9,8 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-using System.Net;
-using DotNetEnv;
+//using System.Net;
+//using DotNetEnv;
 
 namespace Weather_Application
 {
@@ -20,13 +20,14 @@ namespace Weather_Application
         {
             InitializeComponent();
            
+           // DotNetEnv.Env.Load();
         }
 
-        string ApiKey = Env.GetString("API_KEY");
-        //string ApiKey = "a9db2bfe920d645e0bf1f0b59aaeaf33";
+        //string ApiKey = Env.GetString("API_KEY");
+        string ApiKey = "a9db2bfe920d645e0bf1f0b59aaeaf33";
         private void Search_Click(object sender, EventArgs e)
         {
-            DotNetEnv.Env.Load();
+           
             getWeather();
         }
         private void label2_Click(object sender, EventArgs e)
@@ -57,30 +58,56 @@ namespace Weather_Application
                 string backgroundImageUrl = "";
 
                 switch (iconCode)
+                //{
+                //    case "01d": // Clear sky (day)
+                //        backgroundImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3DBsgS34d7tvk8UOsLGNeoNNegZSAeAzkIwz9pnJgAp9OpBXgBSD0cDA_QzodjBmGIao&usqp=CAU";
+                //        break;
+                //    case "01n": // Clear sky (night)
+                //        backgroundImageUrl = "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fclear-sky&psig=AOvVaw0i05cP2DSte6aSTy8OoJg2&ust=1695718817355000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIj13ICzxYEDFQAAAAAdAAAAABAE";
+                //        break;
+                //    case "02d": // Few clouds (day)
+                //        backgroundImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ07XLt4Gc2-c0uHE2QFa3j78IjXBZ8Dys33S_ahgAl_jninMDFUVzQ2ddrezGwmZhHGMk&usqp=CAU";
+                //        break;
+                //    case "02n": // Few clouds (night)
+                //        backgroundImageUrl = "https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?auto=compress&cs=tinysrgb&w=600";
+                //        break;
+                //    case "03d": // Scattered clouds (day)
+                //    case "03n": // Scattered clouds (night)
+                //        backgroundImageUrl = "https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?auto=compress&cs=tinysrgb&w=600";
+                //        break;
+                //    case "04d": // Broken clouds (day)
+                //    case "04n": // Broken clouds (night)
+                //        backgroundImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk3bMBxipgc69eDCjdDSQTmFPkWKD1E6HxfUlV8PX89w&s";
+                //        break;
+                //    case "09d": // Shower rain (day)
+                //    case "09n": // Shower rain (night)
+                //        backgroundImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlqE-HZWwduYgmBodub_aVZTsz9z47XdkzRWq0iNw8MjAWEa0oLrSFWMS-wzjBV_dg4x4&usqp=CAU";
+                //        break;
+
                 {
                     case "01d": // Clear sky (day)
-                        backgroundImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3DBsgS34d7tvk8UOsLGNeoNNegZSAeAzkIwz9pnJgAp9OpBXgBSD0cDA_QzodjBmGIao&usqp=CAU";
+                        backgroundImageUrl = WeatherBackgroundUrls.ClearDay;
                         break;
                     case "01n": // Clear sky (night)
-                        backgroundImageUrl = "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fclear-sky&psig=AOvVaw0i05cP2DSte6aSTy8OoJg2&ust=1695718817355000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIj13ICzxYEDFQAAAAAdAAAAABAE";
+                        backgroundImageUrl = WeatherBackgroundUrls.ClearNight;
                         break;
                     case "02d": // Few clouds (day)
-                        backgroundImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ07XLt4Gc2-c0uHE2QFa3j78IjXBZ8Dys33S_ahgAl_jninMDFUVzQ2ddrezGwmZhHGMk&usqp=CAU";
+                        backgroundImageUrl = WeatherBackgroundUrls.FewCloudsDay;
                         break;
                     case "02n": // Few clouds (night)
-                        backgroundImageUrl = "https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?auto=compress&cs=tinysrgb&w=600";
+                        backgroundImageUrl = WeatherBackgroundUrls.FewCloudsNight;
                         break;
                     case "03d": // Scattered clouds (day)
                     case "03n": // Scattered clouds (night)
-                        backgroundImageUrl = "https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?auto=compress&cs=tinysrgb&w=600";
+                        backgroundImageUrl = WeatherBackgroundUrls.ScatteredClouds;
                         break;
                     case "04d": // Broken clouds (day)
                     case "04n": // Broken clouds (night)
-                        backgroundImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk3bMBxipgc69eDCjdDSQTmFPkWKD1E6HxfUlV8PX89w&s";
+                        backgroundImageUrl = WeatherBackgroundUrls.BrokenClouds;
                         break;
                     case "09d": // Shower rain (day)
                     case "09n": // Shower rain (night)
-                        backgroundImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlqE-HZWwduYgmBodub_aVZTsz9z47XdkzRWq0iNw8MjAWEa0oLrSFWMS-wzjBV_dg4x4&usqp=CAU";
+                        backgroundImageUrl = WeatherBackgroundUrls.ShowerRain;
                         break;
 
                     default:
